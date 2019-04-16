@@ -1,0 +1,9 @@
+[submodule "gojsontoyaml-git"]
+	path = gojsontoyaml-git
+	url = ssh+git://aur@aur.archlinux.org/gojsontoyaml-git.git
+[submodule "ytt"]
+	path = ytt
+	url = ssh+git://aur@aur.archlinux.org/ytt.git
+[submodule "ytt-git"]
+	path = ytt-git
+	url = ssh+git://aur@aur.archlinux.org/ytt-git.git
