@@ -41,8 +41,34 @@ jobs:
           <<: *pkgbuildtest
       - run:
           <<: *buildtest
+  ytt-git:
+    <<: *defaults
+    steps:
+      - run:
+          <<: *updatepackage
+      - checkout
+      - run:
+          <<: *gitupdate
+      - run:
+          <<: *pkgbuildtest
+      - run:
+          <<: *buildtest
+  gojsontoyaml-git:
+    <<: *defaults
+    steps:
+      - run:
+          <<: *updatepackage
+      - checkout
+      - run:
+          <<: *gitupdate
+      - run:
+          <<: *pkgbuildtest
+      - run:
+          <<: *buildtest
 workflows:
   version: 2
   build:
     jobs:
       - ytt
+      - ytt-git
+      - gojsontoyaml-git
