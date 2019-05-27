@@ -7,3 +7,9 @@
 [submodule "ytt-git"]
 	path = ytt-git
 	url = ssh+git://aur@aur.archlinux.org/ytt-git.git
+[submodule "istio-bin"]
+	path = istio-bin
+	url = ssh+git://aur@aur.archlinux.org/istio-bin.git
+[submodule "operator-sdk"]
+	path = operator-sdk
+	url = ssh+git://aur@aur.archlinux.org/operator-sdk.git

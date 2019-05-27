@@ -72,3 +72,5 @@ workflows:
       - ytt
       - ytt-git
       - gojsontoyaml-git
+      - istio-bin
+      - operator-sdk
