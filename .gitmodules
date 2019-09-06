@@ -13,3 +13,6 @@
 [submodule "operator-sdk"]
 	path = operator-sdk
 	url = ssh+git://aur@aur.archlinux.org/operator-sdk.git
+[submodule "kapp-git"]
+	path = kapp-git
+	url = ssh+git://aur@aur.archlinux.org/kapp-git.git

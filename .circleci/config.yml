@@ -89,6 +89,18 @@ jobs:
           <<: *pkgbuildtest
       - run:
           <<: *buildtest
+  kapp-git:
+    <<: *defaults
+    steps:
+      - run:
+          <<: *updatepackage
+      - checkout
+      - run:
+          <<: *gitupdate
+      - run:
+          <<: *pkgbuildtest
+      - run:
+          <<: *buildtest
 workflows:
   version: 2
   build:
@@ -98,3 +110,4 @@ workflows:
       - gojsontoyaml-git
       - istio-bin
       - operator-sdk
+      - kapp-git
