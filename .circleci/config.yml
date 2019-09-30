@@ -17,7 +17,7 @@ installyay: &installmakedepswithyay
     cd ~/aur/${CIRCLE_JOB}
     source PKGBUILD
     echo "Will install makedepends: ${makedepends[@]}"
-    yay -Sy --noconfirm ${makedepends[@]}
+    yay -Sy --noconfirm --useask ${makedepends[@]}
 
 gitupdate: &gitupdate
   name: Git repo updates
