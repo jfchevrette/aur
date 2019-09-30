@@ -15,7 +15,9 @@ installyay: &installmakedepswithyay
     cd yay
     sudo -u builder makepkg -sif --noconfirm
     cd ~/aur/${CIRCLE_JOB}
-    source PKGBUILD && yay -Sy --noconfirm ${makedepends[@]}
+    source PKGBUILD
+    echo "Will install makedepends: ${makedepends[@]}"
+    yay -Sy --noconfirm ${makedepends[@]}
 
 gitupdate: &gitupdate
   name: Git repo updates
