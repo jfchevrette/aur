@@ -16,3 +16,6 @@
 [submodule "kapp-git"]
 	path = kapp-git
 	url = ssh+git://aur@aur.archlinux.org/kapp-git.git
+[submodule "mtail-bin"]
+	path = mtail-bin
+	url = ssh+git://aur@aur.archlinux.org/mtail-bin.git
