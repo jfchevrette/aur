@@ -8,6 +8,15 @@ updatepackage: &updatepackage
   name: Update packages
   command: sudo pacman -Syu --noconfirm
 
+installyay: &installmakedepswithyay
+  name: install yay & makedepends with it
+  command: |
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    sudo -u builder makepkg -sif --noconfirm
+    cd ~/aur/${CIRCLE_JOB}
+    source PKGBUILD && yay -Sy --noconfirm ${makedepends[@]}
+
 gitupdate: &gitupdate
   name: Git repo updates
   command: |
@@ -63,6 +72,8 @@ jobs:
           <<: *gitupdate
       - run:
           <<: *pkgbuildtest
+      - run:
+          <<: *installmakedepswithyay
       - run:
           <<: *buildtest
   mtail-bin:
