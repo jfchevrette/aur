@@ -2,7 +2,7 @@
 defaults: &defaults
   working_directory: ~/aur
   docker:
-    - image: jfchevrette/aur-builder
+    - image: jfchevrette/aur-builder:v1
 
 updatepackage: &updatepackage
   name: Update packages
