@@ -6,7 +6,7 @@ defaults: &defaults
 
 updatepackage: &updatepackage
   name: Update packages
-  command: sudo pacman -Syu --noconfirm
+  command: sudo yay -Syu --noconfirm
 
 gitupdate: &gitupdate
   name: Git repo updates

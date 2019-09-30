@@ -8,3 +8,10 @@ RUN echo "Defaults        lecture = never" > /etc/sudoers.d/privacy \
 
 USER builder
 WORKDIR /home/builder
+
+RUN git clone https://aur.archlinux.org/yay.git && \
+    pushd yay && \
+    makepkg -sif --noconfirm && \
+    popd && \
+    /bin/rm -rf yay
+
