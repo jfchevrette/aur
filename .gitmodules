@@ -19,3 +19,6 @@
 [submodule "mtail-bin"]
 	path = mtail-bin
 	url = ssh+git://aur@aur.archlinux.org/mtail-bin.git
+[submodule "bluejeans"]
+	path = bluejeans
+	url = ssh+git://aur@aur.archlinux.org/bluejeans.git
