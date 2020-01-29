@@ -22,3 +22,6 @@
 [submodule "bluejeans"]
 	path = bluejeans
 	url = ssh+git://aur@aur.archlinux.org/bluejeans.git
+[submodule "sowm"]
+	path = sowm
+	url = ssh+git://aur@aur.archlinux.org/sowm.git
