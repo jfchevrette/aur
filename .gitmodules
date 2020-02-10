@@ -25,3 +25,6 @@
 [submodule "sowm"]
 	path = sowm
 	url = ssh+git://aur@aur.archlinux.org/sowm.git
+[submodule "nodejs-renovate"]
+	path = nodejs-renovate
+	url = ssh+git://aur@aur.archlinux.org/nodejs-renovate.git
