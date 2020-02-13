@@ -31,6 +31,18 @@ buildtest: &buildtest
 # Main
 version: 2
 jobs:
+  bluejeans:
+    <<: *defaults
+    steps:
+      - run:
+          <<: *updatepackage
+      - checkout
+      - run:
+          <<: *gitupdate
+      - run:
+          <<: *pkgbuildtest
+      - run:
+          <<: *buildtest
   gojsontoyaml-git:
     <<: *defaults
     steps:
@@ -55,7 +67,7 @@ jobs:
           <<: *pkgbuildtest
       - run:
           <<: *buildtest
-  kapp-git:
+  nodejs-renovate:
     <<: *defaults
     steps:
       - run:
@@ -68,6 +80,18 @@ jobs:
       - run:
           <<: *buildtest
   mtail-bin:
+    <<: *defaults
+    steps:
+      - run:
+          <<: *updatepackage
+      - checkout
+      - run:
+          <<: *gitupdate
+      - run:
+          <<: *pkgbuildtest
+      - run:
+          <<: *buildtest
+  sowm:
     <<: *defaults
     steps:
       - run:
@@ -119,10 +143,12 @@ workflows:
   version: 2
   build:
     jobs:
+      - bluejeans
       - gojsontoyaml-git
       - istio-bin
-      - kapp-git
       - mtail-bin
+      - nodejs-renovate
       - operator-sdk
+      - sowm
       - ytt
       - ytt-git
